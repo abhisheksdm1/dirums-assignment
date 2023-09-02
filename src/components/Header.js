@@ -27,9 +27,6 @@ export default function Header() {
     <img src="/user1.jpeg" width={50} height={50} alt="user" className="image z-10" />
     <select className="m-3 bg-blue-600 text-white">
     <option ></option>
-    <option ></option>
-    <option ></option>
-    <option ></option>
   </select>
   </div>
     </div>
