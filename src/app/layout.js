@@ -3,6 +3,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import Sidebar from '@/components/Sidebar'
+import { CounterContextProvider } from "@/context/counter.context";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+      <CounterContextProvider>
       <Header/>
       <div className='sidebar'>
         <Sidebar/>
@@ -22,6 +24,7 @@ export default function RootLayout({ children }) {
         <div className='content'>
           {children}
         </div>
+        </CounterContextProvider>
       </body>
     </html>
   )
